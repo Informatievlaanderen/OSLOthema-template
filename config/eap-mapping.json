@@ -2,9 +2,9 @@
 {
   "name": "mijn-vocabularium-voc",
   "type": "voc",
-  "eap": "OSLO-MijnModelBestandMetVocabularium.EAP",
-  "diagram": "OSLO-MijnVocabulariumDiagramNaam",
-  "template": "mijn-vocabulariumtrips-voc.j2",
+  "eap": "OSLO-MijnVocabularium-VOC.eap",
+  "diagram": "OSLO-MijnVocabularium",
+  "template": "mijn-vocabularium-voc.j2",
   "title": "Mijn Vocabularium",
   "publication-state": "https://data.vlaanderen.be/id/conceptscheme/StandaardStatus/OntwerpStandaard",
   "publication-date": "24-01-2020",
@@ -17,8 +17,8 @@
 {
   "name": "mijn-applicatieprofiel-ap",
   "type": "ap",
-  "eap": "OSLO-MijnModelBestandMetApplicatieprofiel.EAP",
-  "diagram": "OSLO-MijnApplicatieprofielDiagramNaam",
+  "eap": "OSLO-MijnApplicatieprofiel-AP.eap",
+  "diagram": "OSLO-MijnApplicatieprofiel",
   "template": "mijn-applicatieprofiel-ap.j2",
   "title": "Mijn Applicatieprofiel",
   "publication-state": "https://data.vlaanderen.be/id/conceptscheme/StandaardStatus/OntwerpStandaard",

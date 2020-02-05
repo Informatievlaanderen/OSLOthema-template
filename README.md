@@ -7,4 +7,4 @@
 | Branch-naam | Beschrijving |
 | ----------- | ------------ |
 | `voc-ontwerp` | Branch voor publicatiepunt met status Ontwerp Standaard voor vocabularium OSLO-MijnVocabularium. |
-| `ap-ontwerp` | Branch voor publicatiepunt met status Ontwerp Standaard voor applicatieprofiel MijnApplicatieprofiel. |
+| `ap-ontwerp` | Branch voor publicatiepunt met status Ontwerp Standaard voor applicatieprofiel OSLO-MijnApplicatieprofiel. |

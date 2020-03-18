@@ -158,17 +158,17 @@ Naam van de betreffende branch.
 
 **_{publicatiedatum}_**
 
-Officiële publicatiedatum, in het formaat YYYYMMDD.
+Officiële publicatiedatum, in xsd:date formaat (YYYY-MM-DD).
 
 ### Voorbeelden
 Voor een tag op branch `voc2-ontwerp`, met publicatiedatum 31 december 2019:
 ```
-voc2-ontwerp-20191231
+voc2-ontwerp-2019-12-31
 ```
 
 Voor een volgende tag op dezelfde branch, met publicatiedatum 6 januari 2020:
 ```
-voc2-ontwerp-20200106
+voc2-ontwerp-2020-01-06
 ```
 
 ## 4. Geavanceerd
@@ -190,7 +190,7 @@ Naam van de tag (!) van waaruit werd vertrokken.
 
 ##### Voorbeeld
 ```
-voc2-ontwerp-20191231-fix
+voc2-ontwerp-2019-12-31-fix
 ```
 
 #### Tag
@@ -210,5 +210,5 @@ Een {updatevolgnummer} is een natuurlijk getal. Gebruik oplopende volgnummers, s
 
 ##### Voorbeeld
 ```
-voc2-ontwerp-20191231-1
+voc2-ontwerp-2019-12-31-1
 ```

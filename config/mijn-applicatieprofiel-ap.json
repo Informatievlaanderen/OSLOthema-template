@@ -6,7 +6,7 @@
   "diagram": "OSLO-MijnApplicatieprofiel",
   "template": "mijn-applicatieprofiel-ap.j2",
   "title": "Mijn Applicatieprofiel",
-  "publication-state": "https://data.vlaanderen.be/id/conceptscheme/StandaardStatus/OntwerpStandaard",
+  "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
   "publication-date": "31-01-2020",
   "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
   "contributors-file": "stakeholders.csv",

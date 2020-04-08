@@ -12,4 +12,4 @@ Dit zijn de git branches waarop gewerkt wordt.
 
 | Branch-naam | Gebruik |
 | ----------- | ------- |
-| `master` | Updates README.md, CHANGELOG ; alle ontwikkelingen die niet hieronder op een andere branch aangeduid staan. |
+| `master`    | Updates README.md, CHANGELOG <br> Alle niet elders in deze tabel vermelde ontwikkelingen aan publicaties. |

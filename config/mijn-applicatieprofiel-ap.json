@@ -2,8 +2,8 @@
 {
   "name": "mijn-applicatieprofiel-ap",
   "type": "ap",
-  "eap": "OSLO-MijnApplicatieprofiel-AP.eap",
-  "diagram": "OSLO-MijnApplicatieprofiel",
+  "eap": "MijnApplicatieprofiel-AP.eap",
+  "diagram": "MijnApplicatieprofiel",
   "template": "mijn-applicatieprofiel-ap.j2",
   "title": "Mijn Applicatieprofiel",
   "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",

@@ -1,6 +1,9 @@
 # OSLOthema-mijnThema
 
-**_Editors: lees eerst [deze richtlijnen](https://github.com/Informatievlaanderen/OSLO-toolchain/blob/master/doc-user/README.md)._**
+**_Editors:_**
+- Lees eerst [deze richtlijnen](https://github.com/Informatievlaanderen/OSLO-toolchain/blob/master/doc-user/README.md).
+- Gebruik [dit](https://github.com/Informatievlaanderen/OSLO-allerleiTooltjes/tree/master/EA-Excel/TagsAndNotes) om gemakkelijk tags te editeren.
+
 
 ## Administratieve informatie
 

@@ -26,15 +26,15 @@ Each file can contains one or more configurations, it is therefore *always a jso
       "language":"en",
       "template":"mijn-applicatieprofiel-ap_en.j2",
       "title": "My Application Profile",
-      "translationjson":"mijn.json",
-      "mergefile":"manufacturing_en_merged.jsonld"
+      "translationjson":"mijn-applicatieprofiel_en.json",
+      "mergefile":"mijn-applicatieprofiel_en_merged.jsonld"
     },
     {
       "language":"nl",
       "template":"mijn-application-ap_nl.j2",
       "title": "Mijn Applicatieprofiel",
-      "translationjson":"manufacturing_en.json",
-      "mergefile":"manufacturing_en_merged.jsonld"
+      "translationjson":"mijn-applicatieprofiel_nl.json",
+      "mergefile":"mijn-applicatieprofiel_nl_merged.jsonld"
     },
     {
       "language":"LANG",
@@ -44,7 +44,7 @@ Each file can contains one or more configurations, it is therefore *always a jso
       "mergefile":"SPEC_LANG_merged.jsonld"
     }
   ],
-  "toolchainversion" : "2"
+  "toolchainversion" : "3"
 }
 ```
 

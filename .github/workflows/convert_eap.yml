@@ -4,23 +4,21 @@ on:
   workflow_dispatch:
     inputs:
       uml-file:
-        description: "Link to the UML file, for example: https://github.com/Informatievlaanderen/OSLOthema-persoon/raw/master/ICEG-Person.eap"
+        description: "Link to the (raw) UML file"
         required: true
-        default: https://github.com/Informatievlaanderen/OSLOthema-persoon/raw/master/ICEG-Person.eap
       diagram-name:
-        description: "Name of the diagram, for example: OSLO-Persoon-Basis"
+        description: "Name of the diagram"
         required: true
         default: "OSLO-Persoon-Basis"
       specification-type:
-        description: "Type of the specification, for example: Vocabulary or ApplicationProfile"
+        description: "Type of the specification: Vocabulary | ApplicationProfile"
         required: true
-        default: "ApplicationProfile"
       version-id:
-        description: "Version of the specification, for example: test/1"
+        description: "Version of the specification"
         required: true
         default: "test/1"
       publication-environment:
-        description: "Publication environment, for example: https://data.vlaanderen.be"
+        description: "Publication environment"
         required: true
         default: "https://data.vlaanderen.be"
 

@@ -3,29 +3,10 @@ name: Convert the EAP file to JSON-ld
 on:
   workflow_dispatch:
     inputs:
-      #   uml-file:
-      #     description: "Link to the (raw) UML file"
-      #     required: true
-      #   diagram-name:
-      #     description: "Name of the diagram"
-      #     required: true
-      #     default: "OSLO-Persoon-Basis"
-      # specification-type:
-      #   description: "Type of the specification: Vocabulary | ApplicationProfile"
-      #   default: "ApplicationProfile"
-      #   required: true
       config-file:
         description: "Name of the config file. Example: mijn-applicatieprofiel-ap.json"
         default: "mijn-applicatieprofiel-ap.json"
         required: true
-      # version-id:
-      #   description: "Version of the specification"
-      #   required: true
-      #   default: "test/1"
-    #   publication-environment:
-    #     description: "Publication environment"
-    #     required: true
-    #     default: "https://data.vlaanderen.be"
 
 jobs:
   convert-eap:
@@ -67,3 +48,12 @@ jobs:
 
       - name: Run oslo-converter-ea
         run: npx oslo-converter-ea --umlFile ${{ steps.read-config.outputs.umlFile }} --diagramName ${{ steps.read-config.outputs.diagramName }} --specificationType ${{ steps.read-config.outputs.specificationType }} --versionId test/1 --publicationEnvironment https://data.vlaanderen.be
+
+      - name: List file structure
+        run: ls -R
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: report.jsonld
+          path: ./report.jsonld

@@ -34,12 +34,12 @@ jobs:
         # Different Node versions. Each node version will trigger the action
         node-version:
           - 20.x
-        steps:
-          - name: Checkout repository
-            uses: actions/checkout@v4
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-          - name: Install ea-converter
-            run: npm install @oslo-flanders/ea-converter
+      - name: Install ea-converter
+        run: npm install @oslo-flanders/ea-converter
 
-          - name: Run oslo-converter-ea
-            run: npx oslo-converter-ea --umlFile ${{ github.event.inputs.uml-file }} --diagramName ${{ github.event.inputs.diagram-name }} --specificationType ${{ github.event.inputs.specification-type }} --versionId ${{ github.event.inputs.version-id }} --publicationEnvironment ${{ github.event.inputs.publication-environment }}
+      - name: Run oslo-converter-ea
+        run: npx oslo-converter-ea --umlFile ${{ github.event.inputs.uml-file }} --diagramName ${{ github.event.inputs.diagram-name }} --specificationType ${{ github.event.inputs.specification-type }} --versionId ${{ github.event.inputs.version-id }} --publicationEnvironment ${{ github.event.inputs.publication-environment }}

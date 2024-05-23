@@ -47,10 +47,10 @@ jobs:
         id: read-config
         run: |
           diagram=$(jq -r '.[0].diagram' config/mijn-applicatieprofiel-ap.json)
-          echo "::set-output diagramName=diagram::$diagram"
+          echo "diagramName=diagram::$diagram" >> "$GITHUB_OUTPUT"
 
           uml=$(jq -r '.[0].eap' config/mijn-applicatieprofiel-ap.json)
-          echo "::set-output umlFile=uml::$uml"
+          echo "umlFile=uml::$uml" "$GITHUB_OUTPUT"
 
       - name: Run oslo-converter-ea
         run: npx oslo-converter-ea --umlFile ${{ steps.read-config.outputs.umlFile }} --diagramName ${{ steps.read-config.outputs.diagramName }} --specificationType ${{ github.event.inputs.specification-type }} --versionId test/1 --publicationEnvironment https://data.vlaanderen.be

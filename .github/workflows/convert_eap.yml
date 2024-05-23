@@ -3,24 +3,24 @@ name: Convert the EAP file to JSON-ld
 on:
   workflow_dispatch:
     inputs:
-      uml-file:
-        description: "Link to the (raw) UML file"
-        required: true
-      diagram-name:
-        description: "Name of the diagram"
-        required: true
-        default: "OSLO-Persoon-Basis"
+      #   uml-file:
+      #     description: "Link to the (raw) UML file"
+      #     required: true
+      #   diagram-name:
+      #     description: "Name of the diagram"
+      #     required: true
+      #     default: "OSLO-Persoon-Basis"
       specification-type:
         description: "Type of the specification: Vocabulary | ApplicationProfile"
         required: true
-      version-id:
-        description: "Version of the specification"
-        required: true
-        default: "test/1"
-      publication-environment:
-        description: "Publication environment"
-        required: true
-        default: "https://data.vlaanderen.be"
+      # version-id:
+      #   description: "Version of the specification"
+      #   required: true
+      #   default: "test/1"
+    #   publication-environment:
+    #     description: "Publication environment"
+    #     required: true
+    #     default: "https://data.vlaanderen.be"
 
 jobs:
   convert-eap:
@@ -36,8 +36,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install jq
+        run: sudo apt-get install jq
+
       - name: Install ea-converter
         run: npm install @oslo-flanders/ea-converter
 
+      - name: Read key from configuration file
+        id: read-config
+        run: |
+          diagram=$(jq -r '.diagram' config/mijn-applicatieprofiel-ap.json)
+          echo "::set-output diagramName=diagram::$diagram"
+
+          uml=$(jq -r '.diagram' config/mijn-applicatieprofiel-ap.json)
+          echo "::set-output umlFile=uml::$uml"
+
       - name: Run oslo-converter-ea
-        run: npx oslo-converter-ea --umlFile ${{ github.event.inputs.uml-file }} --diagramName ${{ github.event.inputs.diagram-name }} --specificationType ${{ github.event.inputs.specification-type }} --versionId ${{ github.event.inputs.version-id }} --publicationEnvironment ${{ github.event.inputs.publication-environment }}
+        run: npx oslo-converter-ea --umlFile ${{ steps.read-config.outputs.umlFile }} --diagramName ${{ steps.read-config.outputs.diagramName }} --specificationType ${{ github.event.inputs.specification-type }} --versionId test/1 --publicationEnvironment https://data.vlaanderen.be

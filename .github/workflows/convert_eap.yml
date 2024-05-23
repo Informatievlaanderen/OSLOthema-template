@@ -12,6 +12,7 @@ on:
       #     default: "OSLO-Persoon-Basis"
       specification-type:
         description: "Type of the specification: Vocabulary | ApplicationProfile"
+        default: "ApplicationProfile"
         required: true
       # version-id:
       #   description: "Version of the specification"
@@ -45,10 +46,10 @@ jobs:
       - name: Read key from configuration file
         id: read-config
         run: |
-          diagram=$(jq -r '.diagram' config/mijn-applicatieprofiel-ap.json)
+          diagram=$(jq -r '.[0].diagram' config/mijn-applicatieprofiel-ap.json)
           echo "::set-output diagramName=diagram::$diagram"
 
-          uml=$(jq -r '.diagram' config/mijn-applicatieprofiel-ap.json)
+          uml=$(jq -r '.[0].eap' config/mijn-applicatieprofiel-ap.json)
           echo "::set-output umlFile=uml::$uml"
 
       - name: Run oslo-converter-ea

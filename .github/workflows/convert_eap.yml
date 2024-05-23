@@ -51,10 +51,8 @@ jobs:
         id: read-config
         run: |
           diagram=$(jq -r '.[0].diagram' config/${{ github.event.inputs.config-file }})
-          echo "diagramName=$diagram" >> "$GITHUB_OUTPUT"
 
           uml=$(jq -r '.[0].eap' config/${{ github.event.inputs.config-file }})
-          echo "umlFile=$uml" "$GITHUB_OUTPUT"
 
           type=$(jq -r '.[0].type' config/${{ github.event.inputs.config-file }})
           if [ "$type" = "ap" ]; then
@@ -62,7 +60,10 @@ jobs:
           elif [ "$type" = "voc" ]; then
           type="Vocabulary"
           fi
-          echo "specificationType=$type" "$GITHUB_OUTPUT"
+
+          echo "diagramName=$diagram" >> "$GITHUB_OUTPUT"
+          echo "umlFile=$uml" >> "$GITHUB_OUTPUT"
+          echo "specificationType=$type" >> "$GITHUB_OUTPUT"
 
       - name: Run oslo-converter-ea
         run: npx oslo-converter-ea --umlFile ${{ steps.read-config.outputs.umlFile }} --diagramName ${{ steps.read-config.outputs.diagramName }} --specificationType ${{ steps.read-config.outputs.specificationType }} --versionId test/1 --publicationEnvironment https://data.vlaanderen.be

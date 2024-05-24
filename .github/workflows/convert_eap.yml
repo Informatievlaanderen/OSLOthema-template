@@ -7,10 +7,6 @@ on:
         description: "Name of the config file. Example: mijn-applicatieprofiel-ap.json"
         required: true
         type: string
-    secrets:
-      token:
-        description: "The token to use for this workflow."
-        required: true
 
 jobs:
   convert-eap:

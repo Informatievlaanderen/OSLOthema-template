@@ -1,10 +1,15 @@
 name: Convert the EAP file to JSON-ld
 
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       config-file:
         description: "Name of the config file. Example: mijn-applicatieprofiel-ap.json"
+        required: true
+        type: string
+    secrets:
+      token:
+        description: "The token to use for this workflow."
         required: true
 
 jobs:

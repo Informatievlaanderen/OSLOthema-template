@@ -1,6 +1,6 @@
 [
 {
-  "name": "mijn-applicatieprofiel-ap",
+  "name": "mijn-applicatieprofiel",
   "type": "ap",
   "eap": "MijnApplicatieprofiel-AP.eap",
   "diagram": "MijnApplicatieprofiel",

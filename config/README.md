@@ -49,6 +49,7 @@ Each file can contains one or more configurations, it is therefore *always a jso
 ```
 
 - *name*: the name (identifier) of the configuration. The name is used as part of the URL on which the specification is published.
+- *prefix*: the name of the namespace in which the standard will be published. This name must be linked to the URL: `/ns/{prefix}/{name}`
 - *type*: the kind of specification. Possible values are `ap|oj|impl|voc`.
 - *eap*: the filename of the EAP file located in the root of this repository.
 - *diagram*: the name of the diagram identifying the specification in the EAP file.

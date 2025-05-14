@@ -54,9 +54,13 @@ Is the usage of the data standard mandatory or recommended? Allowed values are:
 
 Different stages of the data standard lifecycle:
 
-- standaard-in-ontwikkeling
-- kandidaat-standaard
-- erkende-standaard
+- https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard
+- https://data.vlaanderen.be/id/concept/StandaardStatus/KandidaatStandaard
+- https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard
+- https://data.vlaanderen.be/id/concept/StandaardStatus/VerouderdeStandaard
+- https://data.vlaanderen.be/id/concept/StandaardStatus/VervangenStandaard
+- https://data.vlaanderen.be/id/concept/StandaardStatus/HerroepenStandaard
+- https://data.vlaanderen.be/id/concept/StandaardStatus/NotaWerkgroep
 
 ### `responsibleOrganisation`
 

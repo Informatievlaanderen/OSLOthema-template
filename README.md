@@ -36,19 +36,19 @@ This is the name of the data standard, e.g. _Applicatieprofiel LDES_ or _Vocabul
 
 The category of the data standard. Allowed values are:
 
-- Applicatieprofiel
-- Vocabularium
-- Implementatiemodel
-- Technische standaard
-- Organisatorische interoperabiliteit
+- https://data.vlaanderen.be/id/concept/StandaardType/Applicatieprofiel
+- https://data.vlaanderen.be/id/concept/StandaardType/Vocabularium
+- https://data.vlaanderen.be/id/concept/StandaardType/Implementatiemodel
+- https://data.vlaanderen.be/id/concept/StandaardType/TechnischeStandaard
+- https://data.vlaanderen.be/id/concept/StandaardType/Interoperabiliteit
 
 ### `usage`
 
 Is the usage of the data standard mandatory or recommended? Allowed values are:
 
-- Aanbevolen (vrijwillig)
-- Verplicht
-- Pas toe of leg uit
+- https://data.vlaanderen.be/id/concept/StandaardGebruik/Aanbevolen
+- https://data.vlaanderen.be/id/concept/StandaardGebruik/Verplicht
+- https://data.vlaanderen.be/id/concept/StandaardGebruik/PasToeOfLegUit
 
 ### `status`
 

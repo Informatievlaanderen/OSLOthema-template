@@ -194,3 +194,7 @@ The date on which the public review of the data standard ended.
 ### `endOfPublicationDate`
 
 The date on which the data standard is no longer valid and shouldn't be used anymore.
+
+### `domain`
+
+One of the domains defined inside the [OSLO Domein codelist](https://data.vlaanderen.be/id/conceptscheme/Domein)

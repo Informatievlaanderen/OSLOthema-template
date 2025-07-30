@@ -196,7 +196,7 @@ The date on which the public review of the data standard ended.
 The date on which the data standard is no longer valid and shouldn't be used anymore.
 
 ### `domain`
-The domain of the data standard. 
+The domain of the data standard.  
 
 - https://data.vlaanderen.be/id/concept/Domein/Energie
 - https://data.vlaanderen.be/id/concept/Domein/Onderwijs

@@ -194,3 +194,21 @@ The date on which the public review of the data standard ended.
 ### `endOfPublicationDate`
 
 The date on which the data standard is no longer valid and shouldn't be used anymore.
+
+### `domain`
+The domain of the data standard. 
+
+- https://data.vlaanderen.be/id/concept/Domein/Energie
+- https://data.vlaanderen.be/id/concept/Domein/Onderwijs
+- https://data.vlaanderen.be/id/concept/Domein/Sport
+- https://data.vlaanderen.be/id/concept/Domein/Economie
+- https://data.vlaanderen.be/id/concept/Domein/Mobiliteit
+- https://data.vlaanderen.be/id/concept/Domein/Onbekend
+- https://data.vlaanderen.be/id/concept/Domein/Wetgeving
+- https://data.vlaanderen.be/id/concept/Domein/Cultuur
+- https://data.vlaanderen.be/id/concept/Domein/Financiën
+- https://data.vlaanderen.be/id/concept/Domein/WonenRuimtelijkeOrdening
+- https://data.vlaanderen.be/id/concept/Domein/Omgeving
+- https://data.vlaanderen.be/id/concept/Domein/Welzijn
+- https://data.vlaanderen.be/id/concept/Domein/Generiek
+- https://data.vlaanderen.be/id/concept/Domein/Technologie

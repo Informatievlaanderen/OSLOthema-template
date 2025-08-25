@@ -42,6 +42,7 @@ jobs:
           base_dir: target
           comment: true
           use_gitignore: false
+          exclude_file: target/schemas/configuration.json
       - name: Log validation result to summary
         run: |
           echo "# Summary" >> $GITHUB_STEP_SUMMARY

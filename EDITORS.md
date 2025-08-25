@@ -1,7 +1,4 @@
-# Standaardenregister
-
-Deze branch configueert het standaardenregister van OSLO voor dit traject. De standaard kan je vinden op de `main` branch.
-Instructies om het standaardenregister in te stellen kan vinden in [EDITORS.md](./EDITORS.md)
+# OSLOthema-myTheme
 
 This branch should be used to make the data standard available on the [standards registry of Flanders](https://data.vlaanderen.be/standaarden/).
 
@@ -19,21 +16,21 @@ For each data standard a short description is required that will be displayed on
 
 ### Presentations
 
-Presentations given by the OSLO Editors during one of the workshop can be stored in this folder. Accepted file format are Powerpoint (`.pptx`) and PDF (`.pdf`).
+Presentations given by the OSLO Editors during one of the workshop can be stored in this folder. Accepted file format are Powerpoint (`.pptx`) and PDF (`.pdf`). The formatting of the file name should be: 'YYYYMMDD_TypeWorkshopX_Slides_OSLOnameoftrack'
 
 ### Reports
 
-After each workshop a report of that workshop is made by the OSLO Editors, which can be stored in this folder. Accepted file format are Word (`.docx`) and PDF (`.pdf`).
+After each workshop a report of that workshop is made by the OSLO Editors, which can be stored in this folder. Accepted file format are Word (`.docx`) and PDF (`.pdf`). The formatting of the file name should be: 'YYYYMMDD_TypeWorkshopX_Report_OSLOnameoftrack'
 
 ### ap-or-voc-config.json
 
-This is the file that must be used to configure the standard for publication on the standards registry. If the OSLO Editor wants to publish the application profile and vocabulary on the standards registry separately, then **two** configuration files must be created.
+This is the file that must be used to configure the standard for publication on the standards registry. If the OSLO Editor wants to publish the application profile and vocabulary on the standards registry separately, then **two** configuration files must be created. Don't forget to change the name of the file so it is clear which standard this refers to.
 
 ## Content of the configuration file
 
 ### `title`
 
-This is the name of the data standard, e.g. _Applicatieprofiel LDES_ or _Vocabularium Persoon_.
+This is the name of the data standard, e.g. _Applicatieprofiel LDES_ or _Vocabularium Persoon_. The format of the title should always be 'TypeOfSpecification DomainOfStandard'.
 
 ### `category`
 
@@ -77,11 +74,11 @@ The name of the organisation that is responsible for the data standard
 
 The uri of the organisation that is responsible for the data standard.
 
-To construct the URI of the organisation, the [Wegwijs application](https://wegwijs.vlaanderen.be/#/organisations) can be used to find the OVO-code (identifier of an organisation). The URI has the following structure `https://data.vlaanderen.be/id/organisatie/{OVO-code}`.
+To construct the URI of the organisation, the [Wegwijs application](https://wegwijs.vlaanderen.be/#/organisations) can be used to find the OVO-code (identifier of an organisation). The URI has the following structure `https://data.vlaanderen.be/id/organisatie/{OVO-code}`. It is mandatory to use the OVO code of an organisation when available.
 
 ### `publicationDate`
 
-Date on which the most recent version of the standard was published
+Date on which the most recent version of the standard was published. Only YYYY-MM-DD is an accepted format.
 
 ### `descriptionFileName`
 
@@ -125,14 +122,14 @@ This **must** always be an array of objects containing the properties `name` and
 
 ### `charter`
 
-The OSLO charter that will be displayed on the detail page of the data standard. This **must** always be an object containing the properties `name` and `resourceReference`. The `resourceReference`property can be used to reference a URI such as `https://example.org/externalSpec` but it can also be a document that was stored in the `charter` folder. In that case you can write the name of the file.
+The OSLO charter that will be displayed on the detail page of the data standard. This **must** always be an object containing the properties `name` and `resourceReference`. The `resourceReference`property can be used to reference a URI such as `https://example.org/externalSpec` but it can also be a document that was stored in the `charter` folder. In that case you can write the name of the file. It should use the following format: 'OSLO Charter TrackX'. OSLO Charters are linked to OSLO tracks, not specific standards. The same charter can be reused and found across multiple specifications. 
 
 #### Example
 
 ```json
 "charter": {
-    "name": "OSLO Charter",
-    "resourceReference": "oslo-charter.docx"
+    "name": "OSLO Charter TrackX",
+    "resourceReference": "oslo_charter_trackX.docx"
 }
 ```
 
@@ -147,8 +144,8 @@ This **must** always be an array of objects containing the properties `name` and
 ```json
 "reports": [
     {
-        "name": "Verslag workshop 1",
-        "resourceReference": "verslag-workshop-1.docx"
+        "name": "Verslag Werkgroep 1 - DD month YYYY",
+        "resourceReference": "YYYYMMDD_ThematicWorkshop1_Report_OSLOtrackX.pdf"
     }
 ]
 ```
@@ -164,12 +161,12 @@ This **must** always be an array of objects containing the properties `name` and
 ```json
 "presentations": [
     {
-        "name": "Presentatie workshop 1",
-        "resourceReference": "presentatie-workshop-1.pptx"
+        "name": "Presentatie Thematische Werkgroep 1 - DD month YYYY",
+        "resourceReference": "YYYYMMDD_ThematicWorkshop1_Slides_OSLOtrackX.pptx"
     },
     {
-        "name": "Presentatie workshop 2",
-        "resourceReference": "presentatie-workshop-2.pptx"
+        "name": "Presentatie Thematische Werkgroep 2 - DD month YYYY",
+        "resourceReference": "YYYYMMDD_ThematicWorkshop2_Slides_OSLOtrackX.pptx"
     }
 ]
 ```
@@ -197,21 +194,3 @@ The date on which the public review of the data standard ended.
 ### `endOfPublicationDate`
 
 The date on which the data standard is no longer valid and shouldn't be used anymore.
-
-### `domain`
-The domain of the data standard.  
-
-- https://data.vlaanderen.be/id/concept/Domein/Energie
-- https://data.vlaanderen.be/id/concept/Domein/Onderwijs
-- https://data.vlaanderen.be/id/concept/Domein/Sport
-- https://data.vlaanderen.be/id/concept/Domein/Economie
-- https://data.vlaanderen.be/id/concept/Domein/Mobiliteit
-- https://data.vlaanderen.be/id/concept/Domein/Onbekend
-- https://data.vlaanderen.be/id/concept/Domein/Wetgeving
-- https://data.vlaanderen.be/id/concept/Domein/Cultuur
-- https://data.vlaanderen.be/id/concept/Domein/Financiën
-- https://data.vlaanderen.be/id/concept/Domein/WonenRuimtelijkeOrdening
-- https://data.vlaanderen.be/id/concept/Domein/Omgeving
-- https://data.vlaanderen.be/id/concept/Domein/Welzijn
-- https://data.vlaanderen.be/id/concept/Domein/Generiek
-- https://data.vlaanderen.be/id/concept/Domein/Technologie

@@ -271,7 +271,8 @@
         "dateOfAcknowledgementBySteeringCommittee",
         "datePublicReviewStart",
         "datePublicReviewEnd",
-        "endOfPublicationDate"
+        "endOfPublicationDate",
+        "domain"
       ],
       "additionalProperties": false
     }

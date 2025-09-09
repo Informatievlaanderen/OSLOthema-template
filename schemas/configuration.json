@@ -256,7 +256,7 @@
           "description": "Domein waartoe een standaard behoort",
           "type": "string",
           "format": "uri"
-        },
+        }
       },
       "required": [
         "title",

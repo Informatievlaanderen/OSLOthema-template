@@ -24,6 +24,11 @@
           "type": "string",
           "format": "uri"
         },
+        "domain": {
+          "description": "Domein waartoe een standaard behoort",
+          "type": "string",
+          "format": "uri"
+        },
         "responsibleOrganisation": {
           "type": "array",
           "description": "Organisatie verantwoordelijk voor de specificatie",
@@ -251,11 +256,6 @@
               "maxLength": 0
             }
           ]
-        },
-        "domain": {
-          "description": "Domein waartoe een standaard behoort",
-          "type": "string",
-          "format": "uri"
         }
       },
       "required": [

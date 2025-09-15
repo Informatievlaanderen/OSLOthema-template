@@ -256,11 +256,11 @@
               "maxLength": 0
             }
           ]
+        },
+        "funcionalScope": {
+          "description": "Functioneel toepassingsgebied van de specificatie",
+          "type": "string"
         }
-      },
-      "funcionalScope": {
-        "description": "Functioneel toepassingsgebied van de specificatie",
-        "type": "string"
       },
       "required": [
         "title",

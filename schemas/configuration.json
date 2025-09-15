@@ -258,6 +258,10 @@
           ]
         }
       },
+      "funcionalScope": {
+        "description": "Functioneel toepassingsgebied van de specificatie",
+        "type": "string"
+      },
       "required": [
         "title",
         "category",

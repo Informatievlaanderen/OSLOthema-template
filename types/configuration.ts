@@ -18,6 +18,7 @@ export interface Configuration {
   datePublicReviewEnd: string;
   endOfPublicationDate: string;
   domain: string;
+  functionalScope: string;
 }
 
 interface Document {

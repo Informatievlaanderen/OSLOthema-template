@@ -9,7 +9,7 @@ Each file can contains one or more configurations, it is therefore *always a jso
 
 ```
 {
-  "name": "mijn-applicatieprofiel-ap",
+  "name": "mijn-applicatieprofiel",
   "type": "ap",
   "eap": "MijnApplicatieprofiel-AP.eap",
   "diagram": "MijnApplicatieprofiel",

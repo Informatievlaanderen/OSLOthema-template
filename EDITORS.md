@@ -198,3 +198,7 @@ The date on which the data standard is no longer valid and shouldn't be used any
 ### `functionalScope`
 
 The functional scope of the data standard.
+
+### `domain`
+
+The domain of the data standard. Allowed values are listed here: [https://data.vlaanderen.be/id/conceptscheme/Domein](https://data.vlaanderen.be/id/conceptscheme/Domein).

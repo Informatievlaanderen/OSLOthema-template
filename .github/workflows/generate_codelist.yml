@@ -1,0 +1,55 @@
+name: Convert the codelist.csv into a .ttl file
+
+on:
+    workflow_call:
+        inputs:
+            config-file:
+                description: "Name of the csv file. Example: codelijsten/codelijst.csv"
+                required: true
+                type: string
+
+jobs:
+    convert-eap:
+        # The type of runner that the job will run on
+        runs-on: ${{ matrix.os }}
+        strategy:
+            matrix:
+                os: [ubuntu-latest]
+                # Different Node versions. Each node version will trigger the action
+                node-version:
+                    - 24.x
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Install jq
+              run: sudo apt-get install jq
+
+            - name: Install codelist-generator
+              run: npm install @oslo-flanders/codelist-generator
+
+            # Run the generator
+            - name: Run oslo-codelist-generator
+              id: codelist-generator
+              run: |
+                  npx oslo-codelist-generator --input ${{ github.event.inputs.config-file }} --language nl--diagramName  2>&1 | tee output.log
+                  cat output.log
+                  cat output.log >> "$GITHUB_STEP_SUMMARY"
+                  if grep -i "error" output.log; then
+                    echo "Error found in workflow output"
+                    exit 1
+                  fi
+            - name: Check if codelist.ttl exists
+              run: |
+                  if [ -f ./codelist.ttl ]; then
+                    echo "codelist.ttl exists."
+                  else
+                    echo "codelist.ttl does not exist."
+                    exit 1
+                  fi
+
+            - name: Upload artifact
+              uses: actions/upload-artifact@v4
+              with:
+                  name: codelist.ttl
+                  path: ./codelist.ttl

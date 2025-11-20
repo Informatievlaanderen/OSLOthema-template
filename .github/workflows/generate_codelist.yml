@@ -32,7 +32,7 @@ jobs:
             - name: Run oslo-codelist-generator
               id: codelist-generator
               run: |
-                  npx oslo-codelist-generator --input ${{ github.event.inputs.config-file }} --language nl--diagramName  2>&1 | tee output.log
+                  npx oslo-codelist-generator --input ${{ github.event.inputs.config-file }} --language nl 2>&1 | tee output.log
                   cat output.log
                   cat output.log >> "$GITHUB_STEP_SUMMARY"
                   if grep -i "error" output.log; then

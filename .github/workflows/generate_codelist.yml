@@ -9,7 +9,7 @@ on:
                 type: string
 
 jobs:
-    convert-eap:
+    generate-codelist:
         # The type of runner that the job will run on
         runs-on: ${{ matrix.os }}
         strategy:

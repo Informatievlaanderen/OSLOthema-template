@@ -11,6 +11,9 @@ export interface Configuration {
   charter: Document;
   reports: Document[];
   presentations: Document[];
+  implementations: Document[];
+  relevantStandards: Document[];
+  dataExamples: Document[];
   dateOfRegistration: string;
   dateOfAcknowledgementByWorkingGroup: string;
   dateOfAcknowledgementBySteeringCommittee: string;

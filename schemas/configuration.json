@@ -187,6 +187,63 @@
             "additionalProperties": false
           }
         },
+        "implementations": {
+          "type": "array",
+          "description": "Lijst met implementaties van de standaard of implementatiemodellen",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "description": "Naam implementatie(model)",
+                "type": "string"
+              },
+              "resourceReference": {
+                "description": "Link naar implementatie(model)",
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "relevantStandards": {
+          "type": "array",
+          "description": "Lijst met relevante standaarden",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "description": "Naam standaard",
+                "type": "string"
+              },
+              "resourceReference": {
+                "description": "Link naar standaard",
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "dataExamples": {
+          "type": "array",
+          "description": "Lijst met datavoorbeelden",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "description": "Naam datavoorbeeld",
+                "type": "string"
+              },
+              "resourceReference": {
+                "description": "Link naar datavoorbeeld",
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
         "dateOfRegistration": {
           "description": "Datum registratie specificatie",
           "type": "string",

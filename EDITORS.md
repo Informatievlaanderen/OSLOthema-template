@@ -122,7 +122,7 @@ This **must** always be an array of objects containing the properties `name` and
 
 ### `charter`
 
-The OSLO charter that will be displayed on the detail page of the data standard. This **must** always be an object containing the properties `name` and `resourceReference`. The `resourceReference`property can be used to reference a URI such as `https://example.org/externalSpec` but it can also be a document that was stored in the `charter` folder. In that case you can write the name of the file. It should use the following format: 'OSLO Charter TrackX'. OSLO Charters are linked to OSLO tracks, not specific standards. The same charter can be reused and found across multiple specifications. 
+The OSLO charter that will be displayed on the detail page of the data standard. This **must** always be an object containing the properties `name` and `resourceReference`. The `resourceReference`property can be used to reference a URI such as `https://example.org/externalSpec` but it can also be a document that was stored in the `charter` folder. In that case you can write the name of the file. It should use the following format: 'OSLO Charter TrackX'. OSLO Charters are linked to OSLO tracks, not specific standards. The same charter can be reused and found across multiple specifications.
 
 #### Example
 
@@ -167,6 +167,51 @@ This **must** always be an array of objects containing the properties `name` and
     {
         "name": "Presentatie Thematische Werkgroep 2 - DD month YYYY",
         "resourceReference": "YYYYMMDD_ThematicWorkshop2_Slides_OSLOtrackX.pptx"
+    }
+]
+```
+
+### `implementations`
+
+Links to implementations of the data standard or implementation models. This **must** always be an array of objects containing the properties `name` and `resourceReference`.
+
+#### Example
+
+```json
+"implementations": [
+    {
+        "name": "Implementatievoorbeeld Standaard X",
+        "resourceReference": "https://example.org/implementationX"
+    }
+]
+```
+
+### `relevantStandards`
+
+Links to other relevant standards. This **must** always be an array of objects containing the properties `name` and `resourceReference`.
+
+#### Example
+
+```json
+"relevantStandards": [
+    {
+        "name": "Standaard Y",
+        "resourceReference": "https://data.vlaanderen.be/standaarden/standaardY"
+    }
+]
+```
+
+### `dataExamples`
+
+Links to data examples of the data standard. This **must** always be an array of objects containing the properties `name` and `resourceReference`.
+
+#### Example
+
+```json
+"dataExamples": [
+    {
+        "name": "Data voorbeeld Standaard X",
+        "resourceReference": "https://example.org/dataExampleX"
     }
 ]
 ```

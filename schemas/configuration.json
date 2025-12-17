@@ -338,7 +338,10 @@
         "datePublicReviewStart",
         "datePublicReviewEnd",
         "endOfPublicationDate",
-        "domain"
+        "domain",
+        "implementations",
+        "relevantStandards",
+        "dataExamples"
       ],
       "additionalProperties": false
     }

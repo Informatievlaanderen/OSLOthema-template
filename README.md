@@ -43,7 +43,7 @@ Via de tab [issues](https://github.com/Informatievlaanderen/OSLOthema-PAS-ME-AAN
 
 ## Codelijsten
 
-### generate_codelist.yml
+### Github actions - generate_codelist.yml
 
 Deze workflow converteert een CSV-codelijst naar een Turtle (.ttl) RDF-bestand. Volg deze stappen om deze workflow te gebruiken:
 
